@@ -487,6 +487,7 @@ JembeDb.prototype.execute = function(params) {
                 'db': this.dbName,
                 'query': params.sql
             },
+            dataType: "JSON",
             success: eval(params.onSuccess)
         });
 };

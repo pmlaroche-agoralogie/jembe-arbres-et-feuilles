@@ -17,7 +17,7 @@
     function pictureTaken(file) {
         i++;
         var content = "<img src='/jembedocs/" + file + "?i="+i+"'>";
-        //alert('thom: new content: ' + content);
+        alert('thom: new content: ' + content);
         document.getElementById("mypic").innerHTML = content;
 
     }
@@ -28,7 +28,7 @@
         jembe.camera.picture.take(params);
     }
 
-    function videoRecorded(file) {
+ /*   function videoRecorded(file) {
         i++;
         document.getElementById("myvid").innerHTML = "<video width='300' controls src='/jembedocs/" + file + "?i="+i+"'></video>";
     }
@@ -36,7 +36,7 @@
     function recordVideo() {
         jembe.camera.video.record({callback:videoRecorded, output:"myvid.mp4"});
     }
-    
+*/ 
     function test_ecriture() {
          document.getElementById("mytext").innerHTML = "Ceci est un test";
     }
@@ -60,12 +60,7 @@
 			<td><a href="javascript:takePicture({});">Take a picture</a><div id="mypic"></div></td>
 		</tr>
 
-		<tr>
-			<td>camera.video</td>
-			<td><a href="javascript:recordVideo();">Record a video</a><br>
-			<div id="myvid"></div>
-			</td>
-		</tr>
+		
 		<!-- CAMERA -->
 		<tr>
 			<td>Contenu html</td>

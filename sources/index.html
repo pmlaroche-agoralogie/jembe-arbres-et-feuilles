@@ -1,13 +1,13 @@
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <link href="css/screen.css" type="text/css" rel="stylesheet" />
 	
-	<script type="text/javascript" src="js/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="jembe.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
@@ -22,24 +22,14 @@
 
     }
     
+    // remeber : if your mobile device doesn't ask for a picture to be taken : have you chosen the plugin camera in the myjembe website
     function takePicture(params) {
         params.callback = pictureTaken;
         params.output="mypic.png";
+	alert('appel: param output: ' + params.output);
         jembe.camera.picture.take(params);
     }
 
- /*   function videoRecorded(file) {
-        i++;
-        document.getElementById("myvid").innerHTML = "<video width='300' controls src='/jembedocs/" + file + "?i="+i+"'></video>";
-    }
-    
-    function recordVideo() {
-        jembe.camera.video.record({callback:videoRecorded, output:"myvid.mp4"});
-    }
-*/ 
-    
-    
-    
 </script>
 
 </head>

@@ -29,3 +29,14 @@ function try_geoloc() {
         
 	
 }
+
+ /*   function videoRecorded(file) {
+        i++;
+        document.getElementById("myvid").innerHTML = "<video width='300' controls src='/jembedocs/" + file + "?i="+i+"'></video>";
+    }
+    
+    function recordVideo() {
+        jembe.camera.video.record({callback:videoRecorded, output:"myvid.mp4"});
+    }
+*/ 
+ 

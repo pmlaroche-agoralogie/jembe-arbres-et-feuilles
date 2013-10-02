@@ -15,15 +15,15 @@ function try_geoloc() {
                 infoposLat = position.coords.latitude;
             
                 infoposLong = position.coords.longitude;
-                /*jembe.alert.show({
+                jembe.alert.show({
                             message:'pos: ' + infoposLat + ", " + infoposLong,
                             buttons:'Oui',
                             });
-		*/
+		
                 document.getElementById('geoloc_msg').innerHTML='pos: ' + infoposLat + ", " + infoposLong;
              }, onError: function (error) { 
                 document.getElementById('geoloc_msg').innerHTML=error.message;
-                //if (error.code==2) alert('Votre position ne peut etre determinee');
+                if (error.code==2) alert('Votre position ne peut etre determinee');
             }
         });
         

@@ -17,12 +17,12 @@
     function pictureTaken(file) {
         i++;
         var content = "<img src='/jembedocs/" + file + "?i="+i+"'>";
-        alert('thom: new content: ' + content);
+        alert('appel retour: new content: ' + content);
         document.getElementById("mypic").innerHTML = content;
 
     }
     
-    // remeber : if your mobile device doesn't ask for a picture to be taken : have you chosen the plugin camera in the myjembe website
+    // remeber : if your mobile device doesn't ask for a picture to be taken : have you chosen the plugin camera in the myjembe website for your app
     function takePicture(params) {
         params.callback = pictureTaken;
         params.output="mypic.png";

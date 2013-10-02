@@ -13,7 +13,6 @@ function try_geoloc() {
             onSuccess: function(position) {
  
                 infoposLat = position.coords.latitude;
-            
                 infoposLong = position.coords.longitude;
                 jembe.alert.show({
                             message:'pos: ' + infoposLat + ", " + infoposLong,

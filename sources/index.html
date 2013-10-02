@@ -18,6 +18,11 @@
         i++;
         var content = "<img src='/jembedocs/" + file + "?i="+i+"'>";
         alert('appel retour: new content: ' + content);
+	jembe.alert.show({
+                            message:'appel retour show',
+                            buttons:'Oui',
+                            });
+	 
         document.getElementById("mypic").innerHTML = content;
 
     }
@@ -26,7 +31,7 @@
     function takePicture(params) {
         params.callback = pictureTaken;
         params.output="mypic.png";
-	alert('appel: param output: ' + params.output);
+	//alert('appel: param output: ' + params.output);
         jembe.camera.picture.take(params);
     }
 

@@ -37,6 +37,10 @@
         jembe.camera.video.record({callback:videoRecorded, output:"myvid.mp4"});
     }
     
+    function test_ecriture() {
+         document.getElementById("mytext").innerHTML = "Ceci est un test";
+    }
+    
     
     
 </script>
@@ -63,7 +67,12 @@
 			</td>
 		</tr>
 		<!-- CAMERA -->
-
+		<tr>
+			<td>Contenu html</td>
+			<td><a href="javascript:test_ecriture();">Ecrit un test</a><br>
+			<div id="mytext"></div>
+			</td>
+		</tr>
 	</table>
 
     <script type="text/javascript" charset="utf-8">

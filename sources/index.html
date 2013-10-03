@@ -29,7 +29,7 @@
     
     // remeber : if your mobile device doesn't ask for a picture to be taken : have you chosen the plugin camera in the myjembe website for your app
     function takePicture(params) {
-        params.callback = pictureTaken;
+        params.onSuccess = pictureTaken;
         params.output="mypic.png";
 	//alert('appel: param output: ' + params.output);
         jembe.camera.picture.take(params);
@@ -62,9 +62,7 @@
 		</tr>
 	</table>
 
-    <script type="text/javascript" charset="utf-8">
-   try_geoloc()
-    </script>
+   
 </body>
 
 </html>

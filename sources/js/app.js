@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 
 function test_ecriture() {
-         document.getElementById("mytext").innerHTML = "Ceci est un test";
+         document.getElementById("mytext").innerHTML = "Bonjour Timothe";
     }
 
 function try_geoloc() {

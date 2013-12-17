@@ -10,59 +10,29 @@
     <script type="text/javascript" src="js/jquery/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="jembe.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-
-<script type="text/javascript" charset="utf-8">
-
-    var i = 0;
-    function pictureTaken(file) {
-        i++;
-        var content = "<img src='/jembedocs/" + file + "?i="+i+"'>";
-        alert('appel retour: new content: ' + content);
-	jembe.alert.show({
-                            message:'appel retour show',
-                            buttons:'Oui',
-                            });
-	 
-        document.getElementById("mypic").innerHTML = content;
-
-    }
-    
-    // remeber : if your mobile device doesn't ask for a picture to be taken : have you chosen the plugin camera in the myjembe website for your app
-    function takePicture(params) {
-        params.onSuccess = pictureTaken;
-        params.output="mypic.png";
-	//alert('appel: param output: ' + params.output);
-        jembe.camera.picture.take(params);
-    }
-
-</script>
-
+<script type="text/javascript" src="js/declarations.js"></script>
 </head>
-<body>
-	Votre localisation :<div id="geoloc_msg"></div>
-	<table width="90%" border="0" cellpadding="10" cellspacing="0">
-		<tr>
-			<td align="center" class="titre_col">Class</td>
-			<td align="center" class="titre_col">Method</td>
-		</tr>
-
-		<!-- CAMERA -->
-		<tr>
-			<td>camera.picture</td>
-			<td><a href="javascript:takePicture({});">Take a picture</a><div id="mypic"></div></td>
-		</tr>
-
+	<body>
+		<!-- corps du document -->
+		L'ordinateur a choisi al&eacute;atoirement un chiffre
+		entre 1 et 100 que vous devez deviner.
+		<br>Donnez votre proposition dans la barre de texte ci-
+		dessous.
+		<br>
+		<FORM NAME="form1">
+		<INPUT TYPE="text" NAME="input" VALUE="">
+		<INPUT TYPE="button" NAME="bouton" VALUE="OK" onClick="clic()">
+		</FORM>
+		<br>
+		<div id="texte"+
+		</div>
 		
-		<!-- CAMERA -->
-		<tr>
-			<td>Contenu html</td>
-			<td><a href="javascript:test_ecriture();">Ecrit un test</a><br>
-			<div id="mytext"></div>
-			</td>
-		</tr>
-	</table>
-
-   
-</body>
-
+		<script type="text/javascript">
+		init();
+		controle();
+		clic();
+		</script>
+		<br>Cliquez sur ENTER pour r&eacute;initialiser
+		
+	</body>
 </html>

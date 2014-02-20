@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	console.log("Hello World");
+	
 });
 
 
@@ -15,7 +16,7 @@ function getCookie(name)
 }
 
 function display_choice()
-{console.log("dc");
+{console.log("dc");alert('disp choice');
 	var pagename=getCookie("navigation");
 if(pagename==null)pagename=navigation;
 	if(pagename=="accueil"||pagename==null)display_home();

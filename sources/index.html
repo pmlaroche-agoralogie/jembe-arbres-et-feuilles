@@ -21,11 +21,16 @@
             <div id="affiche_nav"></div>
 
             <script>
+                var pagename=getCookie("navigation");
+if(pagename==null)
+{
+
                 document.cookie = "navigation=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
                 document.cookie="navigation=accueil";
                 
-var navigation ="accueil";
+            var navigation ="accueil";
                 display_choice();
+}
             </script>
             
 	</body>

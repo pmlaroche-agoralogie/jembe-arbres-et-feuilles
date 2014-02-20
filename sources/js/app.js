@@ -36,7 +36,6 @@ function display_home()
 { console.log("dh");alert('dh');
 	var htmldiv = "";
 	htmldiv += '<a href="javascript:" onclick="click_choice(\'fplane\')"><img src=/img/platanered.jpg></a>';
-	//'+'"fplane"'+'
 	htmldiv += "<img src=/img/sapinred.jpg>";
 	$('#affiche_nav').html(htmldiv);
 

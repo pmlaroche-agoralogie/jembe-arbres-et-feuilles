@@ -3,7 +3,6 @@ $(document).ready(function () {
 });
 
 
-
 function getCookie(name)
 {console.log("GC");
     var nameEQ = name + "=";
@@ -18,7 +17,7 @@ function getCookie(name)
 function display_choice()
 {console.log("dc");
 	var pagename=getCookie("navigation");
-
+if(pagename==null)pagename=navigation;
 	if(pagename=="accueil"||pagename==null)display_home();
 	if(pagename=="fplane")display_plane();
 
@@ -28,11 +27,12 @@ function click_choice(value)
 
 	alert('choice'+value);
 	document.cookie='"navigation='+value+'"';
+	navigation =value;
 	display_choice();
 }
 
 function display_home()
-{ console.log("dh");
+{ console.log("dh");alert('dh');
 	var htmldiv = "";
 	htmldiv += '<a href="javascript:" onclick="click_choice(\'fplane\')"><img src=/img/platanered.jpg></a>';
 	//'+'"fplane"'+'
@@ -47,6 +47,7 @@ function display_plane()
 	var htmldiv = "";
 	htmldiv += '<img src=/img/poirier.jpg>';
 	htmldiv += "<img src=/img/acacia.jpg>";
+	htmldiv += "<img src=/img/maron.jpg>";
 	$('#affiche_nav').html(htmldiv);
 	
 }

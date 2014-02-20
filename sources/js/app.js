@@ -1,13 +1,43 @@
 $(document).ready(function () {
 	console.log("Hello World");
-	try_geoloc()
+
 });
 
 
+
+function getCookie(name)
+{
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    alert(document.cookie);
+    for(var i=0;i < ca.length;i++) {
+    var c = ca[i].trim();
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+function display_choice()
+{
+	
+	var pagename=getCookie("navigation");
+	alert(pagename);
+	if(pagename=="accueil")display_home();
+}
+
+function display_home()
+{
+	var htmldiv = "";
+	htmldiv += "<img src=/img/platanered.jpg>";
+	htmldiv += "<img src=/img/sapinred.jpg>";
+	$('#affiche_nav').html(htmldiv);
+	alert(htmldiv)
+	
+}
 function test_ecriture() {
          document.getElementById("mytext").innerHTML = "Bonjour Timothe coucou";
     }
-
+/*
 function try_geoloc() {
 	
 	 jembe.geoloc.getCurrentPosition({
@@ -29,7 +59,7 @@ function try_geoloc() {
         
 	
 }
-
+*/
  /*   function videoRecorded(file) {
         i++;
         document.getElementById("myvid").innerHTML = "<video width='300' controls src='/jembedocs/" + file + "?i="+i+"'></video>";

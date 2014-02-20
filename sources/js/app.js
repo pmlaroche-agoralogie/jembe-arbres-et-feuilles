@@ -1,12 +1,11 @@
 $(document).ready(function () {
 	console.log("Hello World");
-
 });
 
 
 
 function getCookie(name)
-{
+{console.log("GC");
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -17,25 +16,26 @@ function getCookie(name)
 }
 
 function display_choice()
-{
+{console.log("dc");
 	var pagename=getCookie("navigation");
-	alert(pagename);
-	if(pagename=="accueil")display_home();
+
+	if(pagename=="accueil"||pagename==null)display_home();
 	if(pagename=="fplane")display_plane();
+
 }
 function click_choice(value)
-{
-	alert('choice'+value);
+{console.log("cc");
 
-	
+	alert('choice'+value);
 	document.cookie='"navigation='+value+'"';
 	display_choice();
 }
 
 function display_home()
-{
+{ console.log("dh");
 	var htmldiv = "";
-	htmldiv += '<a href="javascript:" onclick="click_choice('+'"fplane")'+'"><img src=/img/platanered.jpg></a>';
+	htmldiv += '<a href="javascript:" onclick="click_choice(\'fplane\')"><img src=/img/platanered.jpg></a>';
+	//'+'"fplane"'+'
 	htmldiv += "<img src=/img/sapinred.jpg>";
 	$('#affiche_nav').html(htmldiv);
 
@@ -43,7 +43,7 @@ function display_home()
 
 
 function display_plane()
-{
+{console.log("dp");
 	var htmldiv = "";
 	htmldiv += '<img src=/img/poirier.jpg>';
 	htmldiv += "<img src=/img/acacia.jpg>";
@@ -51,9 +51,7 @@ function display_plane()
 	
 }
 
-function test_ecriture() {
-         document.getElementById("mytext").innerHTML = "Bonjour Timothe coucou";
-    }
+
 /*
 function try_geoloc() {
 	

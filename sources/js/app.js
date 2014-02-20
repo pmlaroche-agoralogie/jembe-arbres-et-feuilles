@@ -18,7 +18,8 @@ function getCookie(name)
 function display_choice()
 {console.log("dc");alert('disp choice');
 	var pagename=getCookie("navigation");
-	if(pagename==null)pagename="accueil";
+alert('disp choice'+pagename);
+	//if(pagename==null)pagename="accueil";
 	if(pagename=="accueil")display_home();
 	if(pagename=="fplane")display_plane();
 

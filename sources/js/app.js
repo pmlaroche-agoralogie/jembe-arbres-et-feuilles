@@ -1,11 +1,11 @@
 $(document).ready(function () {
 	console.log("Hello World");
-	
+	display_choice();
 });
 
 
 function getCookie(name)
-{console.log("GC");
+{
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -18,8 +18,8 @@ function getCookie(name)
 function display_choice()
 {console.log("dc");alert('disp choice');
 	var pagename=getCookie("navigation");
-if(pagename==null)pagename=navigation;
-	if(pagename=="accueil"||pagename==null)display_home();
+	if(pagename==null)pagename="accueil";
+	if(pagename=="accueil")display_home();
 	if(pagename=="fplane")display_plane();
 
 }
@@ -28,7 +28,6 @@ function click_choice(value)
 
 	alert('choice'+value);
 	document.cookie='"navigation='+value+'"';
-	navigation =value;
 	display_choice();
 }
 

@@ -44,7 +44,7 @@ function display_home()
 
 
 function display_plane()
-{console.log("dp");
+{console.log("dp");alert('dp');
 	var htmldiv = "";
 	htmldiv += '<img src=/img/poirier.jpg>';
 	htmldiv += "<img src=/img/acacia.jpg>";

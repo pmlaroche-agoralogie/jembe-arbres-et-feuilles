@@ -18,15 +18,16 @@ function getCookie(name)
 
 function display_choice()
 {
-	
 	var pagename=getCookie("navigation");
 	alert(pagename);
 	if(pagename=="accueil")display_home();
 	if(pagename=="fplane")display_plane();
-	display_home();
 }
 function click_choice(value)
 {
+	alert('choice'+value);
+
+	
 	document.cookie='"navigation='+value+'"';
 	display_choice();
 }

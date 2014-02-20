@@ -26,9 +26,11 @@ function display_choice()
 function click_choice(value)
 {console.log("cc");
 
-	alert('choice'+value);
+	alert('prechoice'+value);
 	document.cookie='"navigation='+value+'"';
-	display_choice();
+	var pagename=getCookie("navigation");
+	alert()
+	display_choice('postchoice'+value);
 }
 
 function display_home()

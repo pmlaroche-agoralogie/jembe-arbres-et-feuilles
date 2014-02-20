@@ -9,7 +9,6 @@ function getCookie(name)
 {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
-    alert(document.cookie);
     for(var i=0;i < ca.length;i++) {
     var c = ca[i].trim();
     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
@@ -23,17 +22,34 @@ function display_choice()
 	var pagename=getCookie("navigation");
 	alert(pagename);
 	if(pagename=="accueil")display_home();
+	if(pagename=="fplane")display_plane();
+	display_home();
+}
+function click_choice(value)
+{
+	document.cookie='"navigation='+value+'"';
+	display_choice();
 }
 
 function display_home()
 {
 	var htmldiv = "";
-	htmldiv += "<img src=/img/platanered.jpg>";
+	htmldiv += '<a href="javascript:" onclick="click_choice('+'"fplane")'+'"><img src=/img/platanered.jpg></a>';
 	htmldiv += "<img src=/img/sapinred.jpg>";
 	$('#affiche_nav').html(htmldiv);
-	alert(htmldiv)
+
+}
+
+
+function display_plane()
+{
+	var htmldiv = "";
+	htmldiv += '<img src=/img/poirier.jpg>';
+	htmldiv += "<img src=/img/acacia.jpg>";
+	$('#affiche_nav').html(htmldiv);
 	
 }
+
 function test_ecriture() {
          document.getElementById("mytext").innerHTML = "Bonjour Timothe coucou";
     }

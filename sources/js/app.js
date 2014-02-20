@@ -26,11 +26,11 @@ function display_choice()
 function click_choice(value)
 {console.log("cc");
 
-	alert('prechoice'+value);
+	alert('prechoice'+value+'"navigation='+value+'"');
 	document.cookie='"navigation='+value+'"';
 	var pagename=getCookie("navigation");
-	alert()
-	display_choice('postchoice'+value);
+	alert('postchoice'+value);
+	display_choice();
 }
 
 function display_home()

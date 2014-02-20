@@ -16,7 +16,7 @@ function getCookie(name)
 }
 
 function display_choice()
-{console.log("dc");alert('disp choice');
+{console.log("dc");
 	var pagename=getCookie("navigation");
 alert('disp choice'+pagename);
 	//if(pagename==null)pagename="accueil";
@@ -28,7 +28,8 @@ function click_choice(value)
 {console.log("cc");
 
 	alert('prechoice'+value+'"navigation='+value+'"');
-	document.cookie='"navigation='+value+'"';
+	document.cookie = "navigation=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+	document.cookie='"navigation='+value+';expires=Thu, 18 Dec 2020 12:00:00 GMT; path=/""';    
 	var pagename=getCookie("navigation");
 	alert('postchoice'+value);
 	display_choice();
